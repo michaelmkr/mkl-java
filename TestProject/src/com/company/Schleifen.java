@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Schleifen {
     public static void main(String[] args) {
 
@@ -43,7 +45,7 @@ public class Schleifen {
             // läuft auch wenn i=0 mindestens einmal durch, weil die Condition erst NACH dem Ausführen überprüft wird
             do {
                 System.out.println("i ist: " + i);
-            } while (i<0);
+            } while (i < 0);
         }
 
 
@@ -54,6 +56,15 @@ public class Schleifen {
             int j;
             for (i = 3, j = 4; i < j; j -= 1) {
                 System.out.println("i ist: " + i);
+            }
+        }
+
+        // FOREACH = ENHANCED FOR
+        System.out.println("\nFOREACH");
+        {
+            int[] a = {1, 2, 3, 4, 5};
+            for (int value : a) {
+                System.out.println(value);
             }
         }
 
