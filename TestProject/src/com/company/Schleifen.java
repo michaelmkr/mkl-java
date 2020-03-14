@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Schleifen {
     public static void main(String[] args) {
 
@@ -66,6 +64,24 @@ public class Schleifen {
             for (int value : a) {
                 System.out.println(value);
             }
+        }
+
+        // FOR mit break
+        {
+            System.out.println("\nFOR mit continue");
+            for (int i = 0; i < 3; i++) {
+                if (i == 1)
+                    continue;
+                System.out.println("i ist: " + i);
+            }
+
+            System.out.println("\nFOR mit break");
+            for (int i = 0; i < 3; i++) {
+                if (i == 1)
+                    break;
+                System.out.println("i ist: " + i);
+            }
+
         }
 
     }
