@@ -17,6 +17,6 @@ public class MyMainClass {
         System.out.println("Mensch 1: " + m1);
 
         m1.setLanguage("Deutsch");
-        System.out.println("Mensch 1 neu : " + m1);
+        System.out.println("Mensch 1 neu: " + m1);
     }
 }
