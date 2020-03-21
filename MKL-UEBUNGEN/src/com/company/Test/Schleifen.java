@@ -1,4 +1,10 @@
-package com.company;
+package com.company.Test;
+
+/**
+ * @author MichaelMkr
+ * created on 21.03.2020
+ * package: com.company.OOP_Test
+ */
 
 public class Schleifen {
     public static void main(String[] args) {

@@ -1,5 +1,11 @@
 package com.company.OOP_Test;
 
+/**
+ * @author MichaelMkr
+ * created on 21.03.2020
+ * package: com.company.OOP_Test
+ */
+
 public class Saeugetier {
 
     private int age;

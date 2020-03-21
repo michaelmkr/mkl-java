@@ -1,5 +1,11 @@
 package com.company.OOP_Test;
 
+/**
+ * @author MichaelMkr
+ * created on 21.03.2020
+ * package: com.company.OOP_Test
+ */
+
 // VERERBUNG
 // extends -> erweitert die Klasse Säugetier -> erbt alle Eigenschaften von Säugetier
 public class Mensch extends Saeugetier {

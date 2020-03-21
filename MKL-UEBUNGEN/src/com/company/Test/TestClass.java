@@ -1,6 +1,12 @@
-package com.company;
+package com.company.Test;
 
-public class Test {
+/**
+ * @author MichaelMkr
+ * created on 21.03.2020
+ * package: com.company.OOP_Test
+ */
+
+public class TestClass {
 
     // Klassenvariablen von Test
     private int a = 0;
@@ -21,7 +27,7 @@ public class Test {
         return num;
     }
     public static void setNum(int num) {
-        Test.num = num;
+        TestClass.num = num;
     }
 
 
@@ -34,9 +40,9 @@ public class Test {
 
         // Durch das "new Test()" wird jedes mal ein Objekt der Klasse Test erstellt -> das heißt t1, t2, t3 haben alle die Eigenschaften a und num
         // t1, t2, t3 -> Sind Objektinstanzen von der Klasse Test
-        Test t1 = new Test();
-        Test t2 = new Test();
-        Test t3 = new Test();
+        TestClass t1 = new TestClass();
+        TestClass t2 = new TestClass();
+        TestClass t3 = new TestClass();
 
         // Instanzvariable a von t1, t2 und t3 verändern
         t1.setA(2);
@@ -47,12 +53,12 @@ public class Test {
         System.out.println("t2.a ist eine Instanzvariable mit dem Wert: " + t2.getA());
         System.out.println("t3.a ist eine Instanzvariable mit dem Wert: " + t3.getA());
 
-        System.out.println("t1.num ist eine Klassenvariable mit dem Wert: " + Test.getNum());
-        System.out.println("t2.num ist eine Klassenvariable mit dem Wert: " + Test.getNum());
-        System.out.println("t3.num ist eine Klassenvariable mit dem Wert: " + Test.getNum());
+        System.out.println("t1.num ist eine Klassenvariable mit dem Wert: " + TestClass.getNum());
+        System.out.println("t2.num ist eine Klassenvariable mit dem Wert: " + TestClass.getNum());
+        System.out.println("t3.num ist eine Klassenvariable mit dem Wert: " + TestClass.getNum());
 
         // Klassenvariable num von der Klasse Test ändern
-        Test.setNum(4711);
+        TestClass.setNum(4711);
         System.out.println("t1.num ist eine Klassenvariable mit dem Wert: " + num);
         System.out.println("t2.num ist eine Klassenvariable mit dem Wert: " + num);
         System.out.println("t3.num ist eine Klassenvariable mit dem Wert: " + num);
