@@ -1,15 +1,34 @@
 package com.company.OOP_Test;
 
-//extends -> erweitert die Klasse Säugetier -> erbt alle Eigenschaften von Säugetier
-public class Mensch extends Saeugetier{
+// VERERBUNG
+// extends -> erweitert die Klasse Säugetier -> erbt alle Eigenschaften von Säugetier
+public class Mensch extends Saeugetier {
 
     private String language;
 
-    public Mensch(){
-        super(0,0);
+    public Mensch() {
+        super(0, 0);
         this.language = "Mandarin";
     }
 
+    public Mensch(String language) {
+        this.setLanguage(language);
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    // POLYMORPHIE
+    // Selbe Methode wie in Säugetier, macht aber etwas anderes!
+    @Override
+    public void setAge(int age){
+        super.setAge(age);
+    }
 
     @Override
     public String toString() {

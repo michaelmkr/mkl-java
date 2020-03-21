@@ -56,6 +56,8 @@ public class Saeugetier {
         }
     }
 
+    // POLYMORPHIE
+    // Wenn dieselbe Methode in verschiedenen Klassen verschiedene Dinge macht
     @Override
     // ToString gibt uns normal nur die ID aus
     // so geben wir Age & Size aus wenn wir die Person mit println ausgeben
