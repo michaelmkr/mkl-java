@@ -10,14 +10,18 @@ import java.util.Random;
 /**
  * @author lbwagnerm
  */
+
 public class Dice {
+
     private static int numberOfDices = 0;
     Random rand;
     private int numberOfEyes = 0;
 
+
     public Dice() {
-        // write some code
+        // TODO write some code
     }
+
 
     /**
      * Constructor of a dice
@@ -25,27 +29,30 @@ public class Dice {
      * @param numOfEyes the number of sides (max eyes) the dice have.
      */
     public Dice(int numOfEyes) {
-        // write some code
+        // TODO write some code
         this.rand = new Random();
         System.out.println("DICE --> Constructor: Dice nr: " + numberOfDices
                 + " created with " + numberOfEyes + " eyes.");
     }
+
 
     /**
      * Function to increase the number of actual available dices.
      */
     private static void increaseNumberOfDices() {
         System.out.println("DICE --> Increasing number of dices.");
-        // write some code
+        // TODO write some code
     }
+
 
     /**
      * Function to increase the number of actual available dices.
      */
     private static void decreaseNumberOfDices() {
         System.out.println("DICE --> Decreasing number of dices.");
-        // write some code
+        // TODO write some code
     }
+
 
     /**
      * Function returning the actual number of created dices.
@@ -54,13 +61,15 @@ public class Dice {
      */
     public static int getNumberOfDices() {
         System.out.println("DICE --> Returning number of dices.");
-        return 0; // write some code --> you need to find the correct return value
+        return 0; // TODO write some code --> you need to find the correct return value
     }
 
+
     public static int throwDices(Dice... dices) {
-        // write some code
-        return 0; // write some code --> you need to find the correct return value
+        // TODO write some code
+        return 0; // TODO write some code --> you need to find the correct return value
     }
+
 
     @Override // DO NOT TOUCH THIS :-)
     protected void finalize() {
@@ -69,25 +78,29 @@ public class Dice {
         decreaseNumberOfDices();
     }
 
+
     public int getNumberOfEyes() {
         System.out.println("DICE --> Returning number of dice eyes.");
-        return 0; // write some code --> you need to find the correct return value
+        return 0; // TODO write some code --> you need to find the correct return value
     }
+
 
     public int throwDice() {
         System.out.println("DICE --> Throwing the dice.");
-        return 0; // write some code --> you need to find the correct return value
+        return 0; // TODO write some code --> you need to find the correct return value
     }
+
 
     public int[] throwDiceNTimes(int n) {
         System.out.println("DICE --> Throwing the dice " + n + " times");
-        // write some code
-        return new int[1]; // write some code --> you need to find the correct return value
+        // TODO write some code
+        return new int[1]; // TODO write some code --> you need to find the correct return value
     }
 
+
     private int getRandomNumberInRange(int min, int max) {
-        // write some code
+        // TODO write some code
         System.out.println("DICE --> Generating new random number.");
-        return rand.nextInt(0); // write some code --> you need to find the correct return value
+        return rand.nextInt(0); // TODO write some code --> you need to find the correct return value
     }
 }
