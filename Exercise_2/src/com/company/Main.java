@@ -30,7 +30,7 @@ public class Main {
 
         d1 = null;
 
-        System.gc();    // Calling garbidge collector --> needed for example
+        System.gc();    // Calling garbage collector --> needed for example
 
         d2.throwDiceNTimes(5);
         int deltaTime = 0;
