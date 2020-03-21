@@ -4,6 +4,7 @@ public class Saeugetier {
 
     private int age;
     private int size;
+    private static int id;
 
     // geben wir keinen Parameter an -> Age wired mit 0 angelegt
     Saeugetier() {
@@ -23,6 +24,7 @@ public class Saeugetier {
     Saeugetier(int age, int size) {
         this.setAge(age);
         this.setSize(size);
+        id++;
     }
 
     public int getAge() {
@@ -56,13 +58,17 @@ public class Saeugetier {
         }
     }
 
+    public static void setId(int id) {
+        Saeugetier.id = id;
+    }
+
     // POLYMORPHIE
     // Wenn dieselbe Methode in verschiedenen Klassen verschiedene Dinge macht
     @Override
     // ToString gibt uns normal nur die ID aus
     // so geben wir Age & Size aus wenn wir die Person mit println ausgeben
     public String toString() {
-        return "Age: " + age + " | Size: " + size;
+        return "Age: " + age + " | Size: " + size + " | ID: " + id;
     }
 
 }

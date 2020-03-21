@@ -14,9 +14,14 @@ public class MyMainClass {
         System.out.println("Säugetier 1 neu: " + s1);
 
         Mensch m1 = new Mensch();
-        System.out.println("Mensch 1: " + m1);
 
         m1.setLanguage("Deutsch");
         System.out.println("Mensch 1 neu: " + m1);
+
+
+        // Instanzmethoden -> verändern "ID" für alle (Menschen, Säugetiere, ..)
+        Saeugetier.setId(10);
+        System.out.println("Mensch 1 nach neuem Setzen der ID: " + m1);
+        System.out.println("Säugetier 1 nach neuem Setzen der ID: " + s1);
     }
 }
