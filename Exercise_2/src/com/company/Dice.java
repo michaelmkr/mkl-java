@@ -14,12 +14,26 @@ import java.util.Random;
 public class Dice {
 
     private static int numberOfDices = 0;
-    Random rand;
+    private Random rand = new Random();
     private int numberOfEyes = 0;
+
+    // SETTER NumberOfDices
+    public static void setNumberOfDices(int numberOfDices) {
+        Dice.numberOfDices = numberOfDices;
+    }
+
+    // SETTER NumberOfEyes
+    public void setNumberOfEyes(int numberOfEyes) {
+        this.numberOfEyes = numberOfEyes;
+    }
 
 
     public Dice() {
         // TODO write some code
+        this.numberOfEyes = 6;
+        increaseNumberOfDices();
+        System.out.println("DICE --> Constructor: Dice nr: " + numberOfDices
+                + " created with " + numberOfEyes + " eyes.");
     }
 
 
@@ -30,7 +44,8 @@ public class Dice {
      */
     public Dice(int numOfEyes) {
         // TODO write some code
-        this.rand = new Random();
+        this.numberOfEyes = numOfEyes;
+        increaseNumberOfDices();
         System.out.println("DICE --> Constructor: Dice nr: " + numberOfDices
                 + " created with " + numberOfEyes + " eyes.");
     }
@@ -41,7 +56,9 @@ public class Dice {
      */
     private static void increaseNumberOfDices() {
         System.out.println("DICE --> Increasing number of dices.");
-        // TODO write some code
+        // write some code
+        int num = getNumberOfDices();
+        setNumberOfDices(num + 1);
     }
 
 
@@ -50,7 +67,8 @@ public class Dice {
      */
     private static void decreaseNumberOfDices() {
         System.out.println("DICE --> Decreasing number of dices.");
-        // TODO write some code
+        // write some code
+        setNumberOfDices(getNumberOfDices() - 1);
     }
 
 
@@ -61,13 +79,19 @@ public class Dice {
      */
     public static int getNumberOfDices() {
         System.out.println("DICE --> Returning number of dices.");
-        return 0; // TODO write some code --> you need to find the correct return value
+        return Dice.numberOfDices;
     }
 
 
     public static int throwDices(Dice... dices) {
-        // TODO write some code
-        return 0; // TODO write some code --> you need to find the correct return value
+        int sumOfEyes = 0;
+        // write some code
+        for (Dice currentDice: dices) {
+            int currentNumber = currentDice.throwDice();
+            sumOfEyes = sumOfEyes + currentNumber;
+            System.out.println("Number is: " + currentNumber);
+        }
+        return sumOfEyes; //correct return value
     }
 
 
@@ -81,13 +105,13 @@ public class Dice {
 
     public int getNumberOfEyes() {
         System.out.println("DICE --> Returning number of dice eyes.");
-        return 0; // TODO write some code --> you need to find the correct return value
+        return this.numberOfEyes; // write some code --> you need to find the correct return value
     }
 
 
     public int throwDice() {
         System.out.println("DICE --> Throwing the dice.");
-        return 0; // TODO write some code --> you need to find the correct return value
+        return getRandomNumberInRange(1,getNumberOfEyes()); // write some code --> you need to find the correct return value
     }
 
 
@@ -101,6 +125,6 @@ public class Dice {
     private int getRandomNumberInRange(int min, int max) {
         // TODO write some code
         System.out.println("DICE --> Generating new random number.");
-        return rand.nextInt(0); // TODO write some code --> you need to find the correct return value
+        return rand.nextInt(max - min) + min; // TODO write some code --> you need to find the correct return value
     }
 }
