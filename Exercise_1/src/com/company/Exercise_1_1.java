@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercise_1_1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NumberFormatException, ArrayIndexOutOfBoundsException {
         // initialize new Scanner
         Scanner input = new Scanner(System.in);
 
@@ -14,9 +14,23 @@ public class Exercise_1_1 {
         //split input by space
         String[] strArr = s.split("\\s+");
 
-        //assign start and end numbers
+        /*//assign start and end numbers
         int start = Integer.parseInt(strArr[0]);
-        int end = Integer.parseInt(strArr[1]);
+        int end = Integer.parseInt(strArr[1]);*/
+
+        int start = 0;
+        int end = 0;
+
+        try {
+            start = Integer.parseInt(strArr[0]);
+            end = Integer.parseInt(strArr[1]);
+        }
+        catch (NumberFormatException nfe) {
+            System.out.println("Please enter 2 numbers seperated with a space!");
+        }
+        catch (ArrayIndexOutOfBoundsException oob) {
+            System.out.println("Please enter a second number!");
+        }
 
         StringBuilder primeNumbers = new StringBuilder();
 
